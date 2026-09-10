@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nebula-wind-pipeline"
+version = "0.1.0"
+description = "PySpark proof-of-concept pipeline for wind-turbine telemetry"
+requires-python = ">=3.10"
+dependencies = [
+  "pyspark==3.5.3",
+  "delta-spark==3.2.1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "ruff>=0.6"]
+
+[project.scripts]
+nebula-wind = "nebula_wind.cli:main"
+nebula-generate = "nebula_wind.sample_data:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+

@@ -1,0 +1,3 @@
+[console_scripts]
+nebula-generate = nebula_wind.sample_data:main
+nebula-wind = nebula_wind.cli:main

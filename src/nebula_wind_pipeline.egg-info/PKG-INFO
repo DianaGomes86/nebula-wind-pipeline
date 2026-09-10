@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: nebula-wind-pipeline
+Version: 0.1.0
+Summary: PySpark proof-of-concept pipeline for wind-turbine telemetry
+Requires-Python: >=3.10
+Requires-Dist: pyspark==3.5.3
+Requires-Dist: delta-spark==3.2.1
+Provides-Extra: dev
+Requires-Dist: pytest>=8.0; extra == "dev"
+Requires-Dist: ruff>=0.6; extra == "dev"

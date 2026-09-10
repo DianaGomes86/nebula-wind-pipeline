@@ -1,0 +1,7 @@
+# Runtime dependencies
+pyspark==3.5.3
+delta-spark==3.2.1
+
+# Development and validation
+pytest>=8.0,<10.0
+ruff>=0.6
